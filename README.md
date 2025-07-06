@@ -103,8 +103,3 @@ src/
 ## Contato
 
 Para dúvidas ou sugestões, abra uma issue no repositório ou entre em contato.
-
-```
-
-Se quiser, posso ajudar com o README do backend também!
-```
