@@ -1,0 +1,118 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: nowrap; 
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1;
+  max-width: 100%;
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.card .header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nome {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.valor {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0;       
+  text-align: center;
+}
+
+.card.azul .valor {
+  color: #0440b0;
+}
+.card.verde .valor {
+  color: #12A405;
+}
+.card.laranja .valor {
+  color: #D25903;
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .valor {
+    font-size: 1.9rem;
+  }
+
+  .nome {
+    font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .valor {
+    font-size: 2.5rem;
+  }
+
+  .nome {
+    font-size: 1.3rem;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .valor {
+    font-size: 1.6rem;
+  }
+
+  .nome {
+    font-size: 1.0rem;
+  }
+
+  span {
+    font-size: 1.0rem;
+  }
+}

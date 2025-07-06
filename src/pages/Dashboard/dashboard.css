@@ -1,0 +1,191 @@
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-cadastro {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.btn-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 0.5rem;
+  background-color: #007AFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cadastro:hover {
+  background-color: #2439f4;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+}
+
+table caption {
+  font-size: 1.6em;
+  margin: 1em 0;
+  font-weight: bold;
+  color: #020d31;
+}
+
+table thead {
+  background-color: #fcfcfc;
+  color: #0045e4;
+}
+
+table th,
+table td {
+  border: 1px solid #e0e0e0; 
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+table th {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background-color: #d7eaf8;
+}
+
+table td .action {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 6px;
+  margin-right: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+table td .action:hover {
+  background-color: #e6e6e6;
+}
+
+table td .badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.badge.aberto {
+  background-color: #5cb85c;
+}
+
+.badge.fechado {
+  background-color: #d9534f;
+}
+
+.badge.pendente {
+  background-color: #f0ad4e;
+}
+
+.btn-more {
+  margin: 2em 0 1em;
+  padding: 0.6em 1.4em;
+  background-color: #181c2e;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: #2c3054;
+}
+
+.dashboard span {
+  margin-top: 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #444;
+}
+
+.inactive-row {
+  background-color: #eaeaea; 
+  color: #b7b7b7;
+}
+
+.inactive-row {
+  background-color: #eaeaea; 
+  color: #b7b7b7;
+}
+
+.inactive-row .action {
+  background-color: #cccccc !important; 
+}
+
+
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.4em;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 1.5em;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75em;
+    text-align: left;
+    font-size: 0.9em;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,111 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 350px;
+  max-width: 90%;
+  position: relative;
+}
+
+.modal-header, h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.close-icon {
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-top: -70px;
+}
+
+.close-icon:hover {
+  color: red;
+}
+
+.form-horizontal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  width: 200px;
+  font-weight: bold;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 12px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.save-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #007AFF;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 320px;
+}
+
+.save-button:hover {
+  background-color: #063a96;
+}
+
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 300px;
+    padding: 1rem;
+  }
+
+  .input-group input {
+    width: 250px;
+    margin-left: 20px;
+  }
+
+  .input-group label {
+    margin-left: 20px;
+  }
+
+  .save-button {
+    width: 270px;
+    margin-left: 20px;
+  }
+}

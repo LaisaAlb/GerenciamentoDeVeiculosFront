@@ -1,69 +1,110 @@
-# React + TypeScript + Vite
+# Frontend - Gerenciador de Veículos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+Aplicação frontend em React para cadastro, edição e gerenciamento de veículos. Possui autenticação, formulários com validação e registro de novo usuário, com navegação utilizando React Router e integração com API backend. Interface responsiva e fácil de usar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18+
+- React Router DOM
+- React Icons
+- Axios (para chamadas API)
+- CSS / CSS Modules
+- JavaScript / TypeScript (se estiver usando TS)
+- Biblioteca para notificações (exemplo: react-toastify) 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Tela de login e registro com validação
+- Tela de Registro de novo usuário
+- Dashboard com listagem de veículos
+- Modal para criar, editar, arquivar, desarquivar e excluir veículos
+- Mensagens de confirmação para ações importantes
+- Armazenamento de token e dados do usuário no localStorage
+- Redirecionamento baseado no estado de autenticação
+- Navagação entre as telas
+
+---
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/seu-projeto-frontend.git
+````
+
+2. Entre na pasta do projeto:
+
+   ```bash
+   cd seu-projeto-frontend
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+4. Configure o arquivo `.env` (exemplo):
+
+   ```
+   REACT_APP_API_URL=http://localhost:3001 (ou outra porta)
+   ```
+
+---
+
+## Uso
+
+1. Execute o projeto:
+
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
+
+2. Acesse [http://localhost:3000](http://localhost:3000) no navegador.
+
+3. Cadastre um novo usuário ou faça login com um existente.
+
+4. Gerencie seus veículos pelo dashboard.
+
+---
+
+## Estrutura do Projeto
+
+```
+src/
+├── components/      # Componentes reutilizáveis (Modal, Mensagem, etc)
+├── pages/           # Páginas da aplicação (Login, Register, Dashboard)
+├── service/         # Chamadas à API e lógica de autenticação
+├── assets/          # Imagens, ícones e estilos
+├── App.tsx          # Configuração das rotas
+└── index.tsx        # Ponto de entrada
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Considerações
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* O frontend depende do backend rodando para funcionar corretamente.
+* As rotas protegidas exigem autenticação válida.
+* Utilize um token JWT para autorização nas requisições.
+
+---
+
+## Contato
+
+Para dúvidas ou sugestões, abra uma issue no repositório ou entre em contato.
+
+```
+
+Se quiser, posso ajudar com o README do backend também!
 ```
